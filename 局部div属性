@@ -1,0 +1,20 @@
+我去，用了老半天才会了，一开始从页面传不行，从后台的链接只需要传一个数据就能刷新局部的div了
+function buttonclick() {
+				var uid = $("#uid").val();
+				var textgrade = $("#textgrade").val();
+				var tid = $("#tid").val();
+				var textvalue = $("#textvalue").val();
+				var username = $("#username").val();
+				var date = new Date().toLocaleString();
+				$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+					if (data==20){
+						$("#huifu").html("您尚未登录");
+						$("#huifu").prop("class","ui right aligned red message");
+					}else if (data==1) {
+						$("#textvalue").val("");
+            
+						$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+
+					}
+				})
+			}
