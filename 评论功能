@@ -1,0 +1,315 @@
+1.前台代码：
+<div class="ui  bottom attached basic segment" >
+				<div class="ui comments" style="position:relative;left: 25%;right: 25%">
+					<div id="comment-container1">
+					<h3 class="ui teal  header">评论</h3>
+					<div id="tianjia" class="comment" th:each="comment:${blog.comments}">
+
+						<a class="avatar">
+							<img th:src="@{/UserController/show2(uid=${comment.uid})}">
+						</a>
+						<div class="content">
+							<a class="author" th:text="${comment.user.username}">Matt</a>
+							<div class="metadata">
+								<span class="date" th:text="${comment.cdate}">今天下午 5:42</span>
+							</div>
+							<div class="text" th:text="${comment.textvalue}">太赞了！ </div>
+							<div class="actions">
+								<input type="hidden" th:value="${comment.cid}">
+								<a id="reply" onclick="clickreply(this)" class="reply">回复</a>
+							</div>
+						</div>
+
+						<div class="comments" >
+
+									<div class="comment" th:each="comment2:${blog.comments2}"  th:if="${comment.cid==comment2.textgrade}" >
+										<a class="avatar">
+											<img th:src="@{/UserController/show2(uid=${comment2.uid})}">
+										</a>
+										<div class="content">
+											<a class="author" th:text="${comment2.user.username}">Jenny Hess</a>
+											<div class="metadata">
+												<span class="date" th:text="${comment2.cdate}"></span>
+											</div>
+											<div class="text" >
+												<a href="javascript:0" th:text="'@'+${comment2.senior.username}+':'" class="teal"></a><span th:text="${comment2.textvalue}"></span>
+											</div>
+											<div class="actions">
+												<input type="hidden" th:value="${comment2.cid}"/>
+												<a onclick="clickreply(this)" class="reply">回复</a>
+											</div>
+										</div>
+										<div class="comment"   th:each="comment3:${blog.comments3}">
+											<a class="avatar">
+												<img th:src="@{/UserController/show2(uid=${comment3.uid})}">
+											</a>
+											<div class="content">
+												<a class="author" th:text="${comment3.user.username}"></a>
+												<div class="metadata">
+													<span class="date" th:text="${comment3.cdate}"></span>
+												</div>
+
+												<div class="text" ><a href="javascript:0" th:text="'@'+${comment3.senior.username}+':'" class="teal"></a><span th:text="${comment3.textvalue}"></span> </div>
+												<div class="actions">
+													<input type="hidden" th:value="${comment3.cid}"/>
+													<a onclick="clickreply(this)" class="reply">回复</a>
+												</div>
+											</div>
+										</div>
+
+									</div>
+
+
+						</div>
+					</div>
+					<form class="ui reply form right floated" >
+						<input id="uid" name="uid" type="hidden" th:value="${session.user.uid}">
+						<input id="username" name="username" type="hidden" th:value="${session.user.username}">
+						<input id="textgrade" name="textgrade" type="hidden"  value="0">
+						<input id="tid" name="tid" type="hidden"  th:value="${blog.tid}">
+						<div class="field">
+							<textarea id="textvalue" name="textvalue" class="fluid" style="width:70% " ></textarea>
+						</div>
+						<div id="huifu"  style="width: 30%;text-align: center;margin: auto;position: relative;right:100px"></div>
+						<div class="ui blue labeled submit icon button" id="button" onclick="buttonclick()" style="position: relative;left: 25%;right: 25%">
+							<i class="icon edit"></i>回复</div>
+					</form>
+				</div>
+				</div>
+				</div>
+
+2.js代码块：
+function buttonclick() {
+				var uid = $("#uid").val();
+				var textgrade = $("#textgrade").val();
+				var tid = $("#tid").val();
+				var textvalue = $("#textvalue").val();
+				var username = $("#username").val();
+				var date = new Date().toLocaleString();
+				//
+				if (textvalue==null||textvalue==""){
+				// $("#huifu").html("评论内容为空");
+				// $("#huifu").prop("class","ui left aligned red message");
+				}else {
+				$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+
+						if (data==20){
+
+						}else if (data==1) {
+							$("#huifu").remove();
+							$("#textvalue").val("");
+							$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+
+						}
+
+				})
+			}
+			}
+			function clickreply(data) {
+				var textgrade = $(data).prev().val();
+				var username = $(data).parent().prev().prev().prev().text();
+
+				$(data).parent().html(' <form class="ui reply form right floated" >' +
+						'<input id="uid1" name="uid1" type="hidden" th:value="${session.user.uid}">' +
+						'<input id="username1" name="username1" type="hidden" th:value="${session.user.username}">' +
+						'<input id="textgrade1" name="textgrade1" type="hidden"  value="1">' +
+						'<input id="tid1" name="tid1" type="hidden"  th:value="${blog.tid}">' +
+						'<div class="field">' +
+						'<textarea id="textvalue1" name="textvalue1" class="fluid" style="width:70% " ></textarea>' +
+						'</div>' +
+						'<div id="huifu"  style="width: 30%;text-align: center;margin: auto"></div>' +
+						'<input type="hidden" value="'+textgrade+'">'+
+						'<div class="ui blue labeled submit icon button" id="but2" onclick="addreply(this)" style="position: relative;left: 25%;right: 25%">' +
+						'<i class="icon edit"></i>回复</div>' +
+						'<input type="hidden" value="'+username+'">'+
+						' <div id="comments" class="comments">' +
+						'</div>'+
+						'</form>');
+			}
+      
+function addreply(data){
+
+				var uid = $("#uid").val();				//回复者uid
+				var tid = $("#tid").val();             //回复文章
+
+				var textvalue = $(data).prev().prev().prev().children(1).val(); //回复内容
+
+				var textgrade = $(data).prev().val(); //父等级
+
+				var username = $(data).next().val();
+
+				if (textvalue==null||textvalue==""){
+
+				}else {
+
+					$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+
+						if (data==20){
+							$("#huifu").html("您尚未登录");
+							$("#huifu").prop("class","ui left aligned red message");
+						}else if (data==1) {
+							$("#huifu").remove();
+							$("#textvalue").val("");
+							$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+						}
+					})
+			}
+
+			}
+      
+3.后端代码：
+blog文章类的代码：
+public class Blog {
+    private Integer tid;
+
+    private String title;
+
+    private String text;
+
+    private String date;
+
+    private Integer uid;
+
+    private Integer publish;   //0代表保存未发布，1代表发布
+
+    private User user;
+
+    private String introduction;
+
+    private Integer point;
+
+    private Integer star;
+
+    private Integer starperson;
+
+    private List<Comment> comments=new ArrayList<>();
+
+    private List<Comment> comments2=new ArrayList<>();   //二级评论
+
+    private List<Comment> comments3=new ArrayList<>();   //二级评论的评论
+    }
+comment类：
+public class Comment {
+    private Integer cid;
+
+    private Integer textgrade;
+
+    private String textvalue;
+
+    private Integer uid;
+
+    private Integer tid;
+
+    private String cdate;
+
+    private User user;
+    }
+增加评论：
+@Controller
+@RequestMapping("/CommentController")
+public class CommentController {
+
+    @Autowired
+    CommentService commentService;
+    @RequestMapping("/commentAdd")
+    @ResponseBody
+    public Object commentAdd(HttpServletRequest req, Comment comment){
+        HttpSession session = req.getSession();
+        User user =(User)session.getAttribute("user");
+        if (user==null){
+            return 20;
+        }else {
+            int i=commentService.commentAdd(comment);
+
+            return i;
+        }
+    }
+}
+@Service
+public class CommentServiceImpl implements CommentService {
+    @Autowired
+    CommentMapper commentMapper;
+    @Override
+    @Transactional
+    public int commentAdd(Comment comment) {
+        DateFormat dateFormat=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String format = dateFormat.format(new Date());
+        comment.setCdate(format);
+        return commentMapper.insertSelective(comment);
+    }
+}
+接下来是添加评论之后通过jQuery的load方法查询数据库刷新此div界面的后台操作：
+@RequestMapping("/showOneBlog")
+    public String showOneBlog(Integer tid,Model model){
+
+        Blog blog=blogService.selectByTid(tid);
+        model.addAttribute("blog",blog);
+        return "/blogdetail";
+    }
+@Override
+    public Blog selectByTid(Integer tid) {
+        Blog blog = blogMapper.selectByPrimaryKey(tid);
+        User user = userMapper.selectByPrimaryKey(blog.getUid());
+        blog.setUser(user);
+        List<Comment> comments=commentMapper.selectByTid(tid);
+        for (Comment comment : comments) {
+            User user1 = userMapper.selectByPrimaryKey(comment.getUid());
+            comment.setUser(user1);
+            Comment comment1=commentMapper.findSeniorUid(comment.getTextgrade());
+            if (comment1!=null){
+                User user2 = userMapper.selectByPrimaryKey(comment1.getUid());
+                comment.setSenior(user2);
+            }
+        }
+        blog.setComments(comments);
+
+        
+        List<Comment> comments2=commentMapper.selectByTidAndPar(tid);
+        for (Comment comment : comments2) {
+            User user1 = userMapper.selectByPrimaryKey(comment.getUid());
+            comment.setUser(user1);
+            Comment comment1=commentMapper.findSeniorUid(comment.getTextgrade());
+            User user2 = userMapper.selectByPrimaryKey(comment1.getUid());
+            comment.setSenior(user2);
+        }
+        List<Comment> comments3 = commentMapper.selectByTidAndParAndPar(tid);
+        for (Comment comment : comments3) {
+            User user1 = userMapper.selectByPrimaryKey(comment.getUid());
+            comment.setUser(user1);
+            Comment comment1=commentMapper.findSeniorUid(comment.getTextgrade());
+            User user2 = userMapper.selectByPrimaryKey(comment1.getUid());
+            comment.setSenior(user2);
+        }
+        blog.setComments2(comments2);
+        blog.setComments3(comments3);
+        
+        return blog;
+    }
+数据库的操作代码：
+  <select id="selectByTid" resultType="comment">
+    select * from comment
+    where tid=#{0}
+    and textgrade=0
+    order by cdate desc;
+  </select>
+  <select id="selectByTidAndPar" resultType="Comment">
+    SELECT * FROM comment
+    where textgrade IN(
+    SELECT cid FROM comment
+    where tid=#{uid}
+    and textgrade=0)
+    order by cdate desc;
+  </select>
+
+ <select id="selectByTidAndParAndPar" resultType="comment">
+    SELECT * FROM comment
+    where textgrade IN(
+    SELECT cid FROM comment
+    where tid=#{uid}
+    and textgrade!=0)
+    order by cdate ;
+ </select>
+     
+      
+
+ 
