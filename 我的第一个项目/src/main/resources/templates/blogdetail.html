@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+<!--文本格式的css-->
+		<link rel="stylesheet" href="/css/typo.css">
+<!--添加动画css-->
+		<link rel="stylesheet" href="/css/animate.css"/>
+<!--		代码高亮-->
+		<link rel="stylesheet" href="/css/prism.css">
+		<script src="/js/prism.js" type="text/javascript"></script>
+		<script type="text/javascript">
+
+			function like(data) {
+				var dianzen = document.getElementById("dianzan");
+				var className = dianzen.className;
+				var tid = $("#tasman").val();
+				if ( className.includes("circular red like icon visible")){
+
+
+					$.post("/BlogController/starSub",{tid:tid},function (data) {
+
+						if (data<0){
+
+						}else {
+							$("#showStar").html(data+" likes");
+						}
+					})
+					$("#dianzan").prop("class","circular grey like icon visible");
+				}else{
+
+
+					$.post("/BlogController/starAdd",{tid:tid},function (data) {
+
+						if (data<0){
+
+						}else {
+							$("#showStar").html(data+" likes");
+						}
+					})
+					$("#dianzan").attr("class","circular red like icon visible");
+
+				}
+			}
+
+
+			function buttonclick() {
+				var uid = $("#uid").val();
+				var textgrade = $("#textgrade").val();
+				var tid = $("#tid").val();
+				var textvalue = $("#textvalue").val();
+				var username = $("#username").val();
+				var date = new Date().toLocaleString();
+
+				if (textvalue==null||textvalue==""){
+
+				}else if (uid==null){
+					$('#button').popup({
+						inline: true
+						// on    : 'click'
+					});
+				}else {
+				$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+
+						if (data==20){
+
+						}else if (data==1) {
+							$("#huifu").remove();
+							$("#textvalue").val("");
+							$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+
+						}
+
+				})
+			}
+
+
+			}
+			function clickreply(data) {
+				var textgrade = $(data).prev().val();
+				var username = $(data).parent().prev().prev().prev().text();
+
+				$(data).parent().html(' <form class="ui reply form right floated" >' +
+						'<input id="uid1" name="uid1" type="hidden" th:value="${session.user.uid}">' +
+						'<input id="username1" name="username1" type="hidden" th:value="${session.user.username}">' +
+						'<input id="textgrade1" name="textgrade1" type="hidden"  value="1">' +
+						'<input id="tid1" name="tid1" type="hidden"  th:value="${blog.tid}">' +
+						'<div class="field">' +
+						'<textarea id="textvalue1" name="textvalue1"  class="fluid" style="width:70% " onblur="backreply(this)"></textarea>' +
+						'</div>' +
+						'<div id="huifu"  style="width: 30%;text-align: center;margin: auto"></div>' +
+						'<input type="hidden" value="'+textgrade+'">'+
+						'<div class="ui blue labeled submit icon button" id="but2" onclick="addreply(this)" style="position: relative;left: 25%;right: 25%" data-content="您尚未登录" data-variation="huge">' +
+						'<i class="icon edit"></i>回复</div>' +
+						'<input type="hidden" value="'+username+'">'+
+						' <div id="comments" class="comments">' +
+						'</div>'+
+						'</form>');
+			}
+			// function clickreply1(data) {
+			// 	var textgrade = $(data).prev().val();
+			// 	$(data).parent().html(' <form class="ui reply form right floated" >' +
+			// 			'<input id="uid1" name="uid1" type="hidden" th:value="${session.user.uid}">' +
+			// 			'<input id="username1" name="username1" type="hidden" th:value="${session.user.username}">' +
+			// 			'<input id="textgrade1" name="textgrade1" type="hidden"  value="1">' +
+			// 			'<input id="tid1" name="tid1" type="hidden"  th:value="${blog.tid}">' +
+			// 			'<div class="field">' +
+			// 			'<textarea id="textvalue1" name="textvalue1" class="fluid" style="width:70% " ></textarea>' +
+			// 			'</div>' +
+			// 			'<div id="huifu"  style="width: 30%;text-align: center;margin: auto"></div>' +
+			// 			'<input type="hidden" value="'+textgrade+'">'+
+			// 			'<div class="ui blue labeled submit icon button" id="but2" onclick="addreply1(this)" style="position: relative;left: 25%;right: 25%">' +
+			// 			'<i class="icon edit"></i>回复</div>' +
+			// 			' <div id="comments" class="comments">' +
+			// 			'</div>'+
+			// 			'</form>');
+			//
+			// }
+			// function addreply1(data){
+			//
+			// 	var uid = $("#uid").val();				//回复者uid
+			// 	var tid = $("#tid").val();             //回复文章
+			//
+			// 	var textvalue = $(data).prev().prev().prev().children(1).val(); //回复内容
+			//
+			// 	var textgrade = $(data).prev().val(); //父等级
+			// 	var username = $(data).next().val();
+			//
+			// 	if (textvalue==null||textvalue==""){
+			//
+			// 	}else {
+			//
+			// 		$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+			//
+			// 			if (data==20){
+			// 				$("#huifu").html("您尚未登录");
+			// 				$("#huifu").prop("class","ui left aligned red message");
+			//
+			// 			}else if (data==1) {
+			// 				$("#huifu").remove();
+			// 				$("#textvalue").val("");
+			// 				$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+			//
+			// 			}
+			//
+			// 		})
+			// 	}
+			//
+			// }
+			function addreply(data){
+
+				var uid = $("#uid").val();				//回复者uid
+				var tid = $("#tid").val();             //回复文章
+
+				var textvalue = $(data).prev().prev().prev().children(1).val(); //回复内容
+
+				var textgrade = $(data).prev().val(); //父等级
+
+				var username = $(data).next().val();
+
+				if (textvalue==null||textvalue==""){
+				}else if (uid==null){
+					$(data).popup({
+						inline: true
+						// on    : 'click'
+					});
+				}else {
+
+					$.post("/CommentController/commentAdd",{uid:uid,textgrade:textgrade,tid:tid,textvalue:textvalue},function (data) {
+
+						if (data==20){
+							$("#huifu").html("您尚未登录");
+							$("#huifu").prop("class","ui left aligned red message");
+						}else if (data==1) {
+							$("#huifu").remove();
+							$("#textvalue").val("");
+							$("#comment-container1").load("/BlogController/showOneBlog?tid="+tid+" #comment-container1");
+						}
+					})
+				}
+
+			}
+
+
+				// function backreply(data) {
+				// var cid = $(data).parent().next().next().val();
+				//
+				// 		if ($(data).val()==null||$(data).val()==""){
+				// 			/**
+				// 			 * 延迟时间以使得click事件得到执行
+				// 			 * */
+				// 			setTimeout(function () {
+				// 				$(data).parent().parent().parent().html('<input type="hidden" th:value="'+cid+'">' +
+				// 						'<a id="reply" onclick="clickreply(this)" class="reply">回复</a>');
+				// 			},500)
+				// 		}
+				//
+				// }
+
+
+		</script>
+	</head>
+	<body >
+			<div class="ui stackable container" style="width: 60%;">
+				
+				<div class="ui top attached segment">
+					
+					<div class="ui horizontal link list">
+						<input type="hidden" id="tasman"  th:value="${blog.tid}"/>
+						<div class="item">
+							<img th:src="@{/UserController/show2(uid=${blog.uid})}" class="ui avatar image "/>
+							<div class="content"><a   href="#" class="header"  th:text="${blog.user.username}"></a></div>
+						</div>
+						<div class="item" >
+							<i class="calender icon"></i><span th:text="${blog.date}"></span>
+						</div>
+<!--						<div class="item">-->
+<!--							<i class="eye icon"></i>2342-->
+<!--						</div>-->
+
+					</div>
+				</div>
+				<div class="ui attached segment  animate__heartBeat" >
+					<!--图片区域-->
+					<!--撑满外层容器-->
+					<img th:src="@{/UserController/show2(uid=${blog.uid})}"  class="ui fluid rounded image" />
+					
+				</div>
+				<div class="ui attached padded segment">
+					<!--内容-->
+					<h2 class="ui center aligned header" th:text="${blog.title}">spring boot </h2>
+<!--					文本格式css-->
+					<div class="typo typo-selection" id="content" style="padding-left: 4em;padding-right: 4em;margin: 20px auto;" >
+<!--						<pre><code class="language-css " th:text="${blog.text}"></code></pre>-->
+						<p class="typo " th:text="${blog.text}"></p>
+
+					</div>
+				</div>
+				
+				<div class="ui attached padded segment" >
+					
+					<div class="ui center aligned basic segment" >
+				        <a class="like" id="like" href="javascript:like(this)" style="position: relative;left: -5px;"><i id="dianzan" class="circular grey like  icon" data-content="赞!" data-variation="huge"></i> <span id="showStar" th:text="${blog.star}==null?0:${blog.star}+' likes'">4 likes</span> </a>
+				    <!--</div>
+				    <div class="ui center aligned basic segment" >-->
+				        <a style="position: relative;left: 5px;" class="like" id="dashang"><i  class="circular gold money  icon" data-content="打赏" data-variation="huge"></i> <span>打赏</span> </a>
+				    </div>
+					<div id="pay" class="ui popup flowing transion hidden">
+						<div class="ui orange basic label">
+							<div class="ui images" style="font-size: inherit;!important">
+								<div class="image">
+									<img th:src="@{/UserController/show2(uid=${blog.uid})}" class="ui fluid rounded image" style="width:120px ;"/>
+									<div class="center aligned">支付宝</div>
+								</div>
+								<div class="image">
+									<img th:src="@{/UserController/show2(uid=${blog.uid})}" class="ui fluid rounded image" style="width:120px ;"/>
+									<div class="center aligned">微信</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					
+				</div>
+
+
+				<div class="ui  bottom attached basic segment" >
+				<div class="ui comments" style="position:relative;left: 25%;right: 25%">
+					<div id="comment-container1">
+					<h3 class="ui teal  header">评论</h3>
+					<div id="tianjia" class="comment" th:each="comment:${blog.comments}">
+
+						<a class="avatar">
+							<img th:src="@{/UserController/show2(uid=${comment.uid})}">
+						</a>
+						<div class="content">
+							<a class="author" th:text="${comment.user.username}">Matt</a>
+							<div class="metadata">
+								<span class="date" th:text="${comment.cdate}">今天下午 5:42</span>
+							</div>
+							<div class="text" th:text="${comment.textvalue}">太赞了！ </div>
+							<div class="actions">
+								<input type="hidden" th:value="${comment.cid}">
+								<a id="reply" onclick="clickreply(this)" class="reply">回复</a>
+							</div>
+						</div>
+
+						<div class="comments" th:if="${#arrays.length(comment.replyComments)}>0"   >
+
+									<div class="comment"  th:each="reply:${comment.replyComments}">
+										<a class="avatar">
+											<img th:src="@{/UserController/show2(uid=${reply.uid})}">
+										</a>
+										<div class="content">
+											<a class="author"  th:text="${reply.user.username}">Jenny Hess</a>
+											<div class="metadata">
+												<span class="date" th:text="${reply.cdate}"></span>
+											</div>
+											<div class="text" >
+												<a href="javascript:0" th:text="'@'+${reply.senior.username}+':'" class="teal"></a><span th:text="${reply.textvalue}"></span>
+											</div>
+											<div class="actions">
+												<input type="hidden" th:value="${reply.cid}"/>
+												<a onclick="clickreply(this)" class="reply">回复</a>
+											</div>
+
+										</div>
+
+
+									</div>
+
+						</div>
+
+
+					 </div>
+					</div>
+					<form class="ui reply form right floated" >
+						<input id="uid" name="uid" type="hidden" th:if="${session.user!=null}" th:value="${session.user.uid}">
+
+						<input id="username" name="username" type="hidden" th:if="${session.user!=null}" th:value="${session.user.username}">
+
+						<input id="textgrade" name="textgrade" type="hidden"  value="0">
+						<input id="tid" name="tid" type="hidden"  th:value="${blog.tid}">
+
+						<div class="field">
+							<textarea id="textvalue" name="textvalue" class="fluid" style="width:70% " ></textarea>
+						</div>
+						<div id="huifu"  style="width: 30%;text-align: center;margin: auto;position: relative;right:100px"></div>
+						<div class="ui blue labeled submit icon button" id="button" onclick="buttonclick()" style="position: relative;left: 25%;right: 25%" data-content="您尚未登录" data-variation="huge" >
+							<i class="icon edit"></i>回复</div>
+					</form>
+				</div>
+				</div>
+				</div>
+			</div>
+			<script>
+
+				$('#dianzan').popup({
+					inline: true
+				});
+				$('#dashang').popup({
+					inline: true
+				});
+				$('#dashang').popup({
+					popup : $('#pay'),
+					position: 'top center'
+				});
+			</script>
+	</body>
+</html>

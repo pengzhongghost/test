@@ -1,0 +1,99 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--- Site CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/site.css">
+  <link rel="stylesheet" type="text/css" href="/css/grid.css">
+
+  <!--- Component CSS -->
+  <link rel="stylesheet" type="text/css" href="/css/icon.css">
+  <link rel="stylesheet" type="text/css" href="/css/button.css">
+  <link rel="stylesheet" type="text/css" href="/css/card.css">
+  <link rel="stylesheet" type="text/css" href="/css/label.css">
+  <link rel="stylesheet" type="text/css" href="/css/image.css">
+  <link rel="stylesheet" type="text/css" href="/css/reveal.css">
+  <link rel="stylesheet" type="text/css" href="/css/dimmer.css">
+  <link rel="stylesheet" type="text/css" href="/css/rating.css">
+  <link rel="stylesheet" type="text/css" href="/css/transition.css">
+  <link rel="stylesheet" type="text/css" href="/css/popup.css">
+
+  <!--- Component JS -->
+  <script src="/assets/library/jquery.min.js"></script>
+  <script src="/assets/library/iframe-content.js"></script>
+  <script type="text/javascript" src="/js/popup.js"></script>
+  <script type="text/javascript" src="/js/dimmer.js"></script>
+  <script type="text/javascript" src="/js/rating.js"></script>
+  <script type="text/javascript" src="/js/transition.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+		<script type="text/javascript">
+			function topage(data) {
+				var index = $(data).children(1).val();
+				var searchinfo = window.parent.topFrame.document.getElementById("searchinfo").value;
+
+				location.href="/BlogController/showBlog?index="+index+"&searchinfo="+searchinfo;
+			}
+
+
+
+		</script>
+	</head>
+	<body >
+
+		<!--第一行-->
+<div class="ui five cards stackable" style="margin: 60px !important;">
+
+
+	<a th:href="@{/BlogController/showOneBlog(tid=${blog.tid})}" class="ui card content" th:each="blog:${pageBean.list}">
+
+			<div class="content ui container ">
+
+				<div class="header" th:text="${blog.title}">可爱的小狗</div>
+				<div class="extra content">
+					<div class="left floated author">
+						<img th:src="@{/UserController/show2(uid=${blog.uid})}" class="ui avatar image"> <i th:text="${blog.user.username}"></i>
+					</div>
+				</div>
+				<div class="description">
+					<p th:text="${blog.introduction}">萌萌狗有各种形状和大小。有的小狗因为呆萌的表情惹人疼爱，有的则因为五短身材令人怜惜。甚至还有一些会因为巨大的体型也会显得傻缺。</p>
+					<p th:text="${blog.date}">Many people also have their own barometers for what makes a cute dog.</p>
+				</div>
+
+			</div>
+
+	</a>
+
+			<div class="content right aligned ui container " >
+				<div class="ui buttons" >
+						<input hidden="hidden" id="rightindex" th:value="${pageBean.index}">
+						<button class="ui teal icon button" th:if="${pageBean.index>1}" onclick="topage(this)" th:value="${pageBean.index-1}">
+							<input hidden="hidden"  th:value="${pageBean.index-1}">
+							<i class="hand point left outline icon" ></i>
+						</button>
+
+					<div class="container" th:each="num:${pageBean.numbers}">
+						<button class="ui teal icon button"  th:if="${pageBean.index!=num}"   onclick="topage(this)">
+							<input hidden="hidden" th:value="${num}">
+							<i  th:text="${num}" ></i>
+						</button>
+						<button class="ui teal icon button" th:if="${pageBean.index==num}"    onclick="javascript:0">
+							<input hidden="hidden" th:value="${num}">
+							<i  th:text="${num}" ></i>
+						</button>
+					</div>
+
+						<button class="ui teal icon button" th:if="${pageBean.index<pageBean.totalPageCount}"  onclick="topage(this)" th:value="${pageBean.index+1}">
+							<input hidden="hidden"  th:value="${pageBean.index+1}">
+							<i  class="hand point right outline icon" ></i>
+						</button>
+
+				</div>
+			</div>
+
+</div>
+
+	</body>
+</html>

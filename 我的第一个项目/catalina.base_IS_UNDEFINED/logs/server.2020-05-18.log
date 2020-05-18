@@ -1,0 +1,825 @@
+2020-05-18 18:13:49.147 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:13:49.150 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:13:49.152 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:13:49.208 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 11960 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:13:49.209 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:13:49.245 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:13:49.246 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:13:49.253 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:13:50.032 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:13:50.032 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:13:50.215 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$48b1ef56] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:13:50.562 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:13:50.567 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:13:50.567 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:13:50.567 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:13:50.568 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:13:50.568 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:13:50.568 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:13:50.570 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:13:50.637 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:13:50.641 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1395 ms
+2020-05-18 18:13:51.600 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3f4dd7a8, org.springframework.security.web.context.SecurityContextPersistenceFilter@5d1ffd3d, org.springframework.security.web.header.HeaderWriterFilter@1f29cea1, org.springframework.security.web.authentication.logout.LogoutFilter@1a15cdb2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7072b684, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e702ad5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32eb0931, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3d4067ee, org.springframework.security.web.session.SessionManagementFilter@76b2ec1f, org.springframework.security.web.access.ExceptionTranslationFilter@971e931, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1f27d53f]
+2020-05-18 18:13:51.642 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:13:51.782 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:13:51.838 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:13:51.859 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:13:51.967 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnableCompatible="false" qosEnable="false" hostname="DESKTOP-89F2UQS" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:13:51.977 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:13:51.978 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:13:51.978 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:13:51.978 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:13:51.978 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:13:52.213 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:13:52.220 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:13:52.234 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:13:52.289 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:13:52.566 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:13:52.569 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.585 seconds (JVM running for 4.484)
+2020-05-18 18:15:04.453 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:15:04.456 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:15:04.459 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:15:04.515 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 480 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:15:04.515 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:15:04.554 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:15:04.554 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:15:04.561 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:15:05.097 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:15:05.097 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:15:05.279 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$260add34] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:15:05.609 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:15:05.614 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:15:05.614 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:15:05.614 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:15:05.615 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:15:05.615 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:15:05.615 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:15:05.617 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:15:05.683 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:15:05.683 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1129 ms
+2020-05-18 18:15:06.562 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@46d0d17f, org.springframework.security.web.context.SecurityContextPersistenceFilter@42d90f44, org.springframework.security.web.header.HeaderWriterFilter@41a5f225, org.springframework.security.web.authentication.logout.LogoutFilter@523cd723, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1e75c0e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@22cda2e7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6fe7e8e5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ae4ce8c, org.springframework.security.web.session.SessionManagementFilter@49e30cd5, org.springframework.security.web.access.ExceptionTranslationFilter@484b7b52, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4bcb7223]
+2020-05-18 18:15:06.602 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:15:06.743 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:15:06.797 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:15:06.819 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:15:06.925 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnable="false" hostname="DESKTOP-89F2UQS" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:15:06.935 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:15:06.935 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:15:06.935 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:15:06.935 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:15:06.935 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:15:07.159 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:15:07.166 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:15:07.180 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:15:07.235 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:15:07.459 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:15:07.461 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.166 seconds (JVM running for 4.008)
+2020-05-18 18:15:09.642 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=8857052A7C281EEF4FA57417D2D95230] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:15:09.647 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:15:09.647 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:15:09.665 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-18 18:15:09.958 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [279] milliseconds.
+2020-05-18 18:15:09.979 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:15:09.981 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:15:10.157 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@368590e8], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@7339d49f]
+2020-05-18 18:15:10.290 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:15:10.301 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:15:10.301 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:15:14.528 [http-nio-8081-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:15:14.591 [http-nio-8081-exec-6] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:15:14.687 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:15:14.687 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:15:14.704 [http-nio-8081-exec-8] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1ba3f0a0], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@1f9c670c]
+2020-05-18 18:15:14.711 [http-nio-8081-exec-8] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:15:14.746 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:15:14.746 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:18:09.197 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:18:09.200 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:18:09.202 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:18:09.256 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 14048 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:18:09.257 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:18:09.292 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:18:09.292 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:18:09.299 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:18:09.856 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:18:09.856 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:18:10.044 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$bfa225] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:18:10.374 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:18:10.379 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:18:10.379 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:18:10.379 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:18:10.380 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:18:10.380 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:18:10.380 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:18:10.382 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:18:10.448 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:18:10.448 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1156 ms
+2020-05-18 18:18:11.361 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@516e0e87, org.springframework.security.web.context.SecurityContextPersistenceFilter@203ff123, org.springframework.security.web.header.HeaderWriterFilter@2ae877d1, org.springframework.security.web.authentication.logout.LogoutFilter@1c968c9e, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2bcbce2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5a6b4813, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@62a81bbb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@63908822, org.springframework.security.web.session.SessionManagementFilter@6153021c, org.springframework.security.web.access.ExceptionTranslationFilter@7fb929a1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@25da5a0c]
+2020-05-18 18:18:11.401 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:18:11.540 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:18:11.593 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:18:11.618 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:18:11.719 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnableCompatible="false" qosEnable="false" hostname="DESKTOP-89F2UQS" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:18:11.728 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:18:11.729 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:18:11.729 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:18:11.729 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:18:11.729 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:18:11.954 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:18:11.961 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:18:11.973 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:18:12.025 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:18:12.291 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:18:12.293 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.25 seconds (JVM running for 4.1)
+2020-05-18 18:18:21.129 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=C5E2452376A720058532995687141D14] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:18:21.134 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:18:21.134 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:18:21.152 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-18 18:18:21.444 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [270] milliseconds.
+2020-05-18 18:18:21.469 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:21.471 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:18:21.635 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@66bba1d6], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@13305fe2]
+2020-05-18 18:18:21.766 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:18:21.772 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:21.772 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:18:30.689 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:18:30.750 [http-nio-8081-exec-9] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:18:30.840 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhanf', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:30.840 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:18:30.863 [http-nio-8081-exec-7] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@5ab87777], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@5e87f8f8]
+2020-05-18 18:18:30.877 [http-nio-8081-exec-7] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:18:30.897 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:30.897 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:18:48.714 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='admin', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:48.714 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:18:48.728 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@2402bbb1], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@13f777cb]
+2020-05-18 18:18:48.731 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:18:48.766 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:18:48.766 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:18:57.553 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:18:57.556 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:18:57.558 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:18:57.623 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 14720 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:18:57.624 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:18:57.655 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:18:57.656 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:18:57.663 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:18:58.210 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:18:58.210 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:18:58.392 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$e32b0348] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:18:58.733 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:18:58.738 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:18:58.738 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:18:58.738 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:18:58.739 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:18:58.739 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:18:58.740 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:18:58.742 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:18:58.810 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:18:58.811 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1155 ms
+2020-05-18 18:18:59.695 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6309f785, org.springframework.security.web.context.SecurityContextPersistenceFilter@3935ed0e, org.springframework.security.web.header.HeaderWriterFilter@534d0d4c, org.springframework.security.web.authentication.logout.LogoutFilter@1b90428, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7ca4c233, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5dac7991, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@464b3bc6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f336d35, org.springframework.security.web.session.SessionManagementFilter@6b46bd77, org.springframework.security.web.access.ExceptionTranslationFilter@1ec0dc5d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@10d6da0f]
+2020-05-18 18:18:59.734 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:18:59.874 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:18:59.928 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:18:59.950 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:19:00.056 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" hostname="DESKTOP-89F2UQS" qosEnable="false" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:19:00.066 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:00.066 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:00.066 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:00.066 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:00.066 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:00.296 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:19:00.302 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:19:00.316 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:19:00.369 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:19:00.623 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:19:00.626 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.23 seconds (JVM running for 4.057)
+2020-05-18 18:19:09.582 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=B743ADA5DCF1E86871C4C364867FE343] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:19:09.587 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:19:09.588 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:19:09.605 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-05-18 18:19:09.696 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:19:09.761 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:19:10.042 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [261] milliseconds.
+2020-05-18 18:19:10.044 [http-nio-8081-exec-1] ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.NullPointerException: null
+	at com.project.service.impl.LoginServiceImpl.loadUserByUsername(LoginServiceImpl.java:45)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 51 common frames omitted
+2020-05-18 18:19:10.066 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:19:10.068 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:19:10.236 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7835f4f9], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@26480e9]
+2020-05-18 18:19:10.366 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:19:10.376 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:19:10.376 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:19:22.264 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:19:22.267 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:19:22.270 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:19:22.326 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 14448 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:19:22.327 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:19:22.359 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:19:22.359 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:19:22.366 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:19:22.913 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:19:22.914 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:19:23.103 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$cf9c783f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:19:23.441 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:19:23.446 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:19:23.447 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:19:23.447 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:19:23.448 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:19:23.448 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:19:23.448 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:19:23.450 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:19:23.517 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:19:23.517 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1158 ms
+2020-05-18 18:19:24.481 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@c9916ca, org.springframework.security.web.context.SecurityContextPersistenceFilter@3213c6c2, org.springframework.security.web.header.HeaderWriterFilter@23b40b6a, org.springframework.security.web.authentication.logout.LogoutFilter@34ae749c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@49cdf317, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@32fc35a9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@ac8bd7b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@17da55e2, org.springframework.security.web.session.SessionManagementFilter@2724202e, org.springframework.security.web.access.ExceptionTranslationFilter@2c754d06, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@fc09b8]
+2020-05-18 18:19:24.523 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:19:24.670 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:19:24.726 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:19:24.753 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:19:24.857 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnable="false" hostname="DESKTOP-89F2UQS" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:19:24.866 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:24.866 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:24.866 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:24.866 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:24.866 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:25.111 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:19:25.118 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:19:25.131 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:19:25.186 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:19:25.449 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:19:25.452 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.353 seconds (JVM running for 4.19)
+2020-05-18 18:19:33.226 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=FE8EFC04841AB3C5B1ECC3D1C61EC2E7] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:19:33.231 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:19:33.231 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:19:33.249 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-18 18:19:33.340 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:19:33.401 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:19:33.690 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [268] milliseconds.
+2020-05-18 18:19:33.692 [http-nio-8081-exec-1] ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.NullPointerException: null
+	at com.project.service.impl.LoginServiceImpl.loadUserByUsername(LoginServiceImpl.java:45)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 51 common frames omitted
+2020-05-18 18:19:33.713 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:19:33.715 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:19:33.878 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3c242546], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@768495e7]
+2020-05-18 18:19:34.008 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:19:34.018 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:19:34.019 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:19:57.272 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:19:57.275 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:19:57.276 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:19:57.328 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 1640 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:19:57.328 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:19:57.357 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:19:57.357 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:19:57.364 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:19:57.925 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:19:57.925 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:19:58.110 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$4e15bc9c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:19:58.457 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:19:58.462 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:19:58.462 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:19:58.462 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:19:58.464 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:19:58.464 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:19:58.464 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:19:58.466 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:19:58.534 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:19:58.535 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1178 ms
+2020-05-18 18:19:59.449 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c5c6d5b, org.springframework.security.web.context.SecurityContextPersistenceFilter@659b44db, org.springframework.security.web.header.HeaderWriterFilter@1e731c59, org.springframework.security.web.authentication.logout.LogoutFilter@17bb871a, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@257ff1c7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7518af66, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@44e9c760, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@275c8111, org.springframework.security.web.session.SessionManagementFilter@38a60e94, org.springframework.security.web.access.ExceptionTranslationFilter@66c517d3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3e003be0]
+2020-05-18 18:19:59.487 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:19:59.624 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:19:59.677 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:19:59.697 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:19:59.811 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnable="false" qosEnableCompatible="false" hostname="DESKTOP-89F2UQS" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:19:59.822 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:59.822 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:59.822 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:59.822 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:19:59.822 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:00.063 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:20:00.070 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:20:00.083 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:20:00.141 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:20:00.410 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:20:00.413 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.296 seconds (JVM running for 4.096)
+2020-05-18 18:20:01.078 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=1F3E00E894C9FC83EB495969AC8C6711] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:20:01.084 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:20:01.084 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:20:01.105 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 21 ms
+2020-05-18 18:20:01.205 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:20:01.275 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:20:01.590 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [291] milliseconds.
+2020-05-18 18:20:01.592 [http-nio-8081-exec-1] ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.NullPointerException: null
+	at com.project.service.impl.LoginServiceImpl.loadUserByUsername(LoginServiceImpl.java:45)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 51 common frames omitted
+2020-05-18 18:20:01.612 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:20:01.614 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:20:01.791 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@8fbacb1], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@20ad32d8]
+2020-05-18 18:20:01.925 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:20:01.935 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:20:01.935 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:20:16.904 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:20:16.907 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:20:16.910 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:20:16.973 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 1056 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:20:16.974 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:20:17.010 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:20:17.010 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:20:17.017 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:20:17.572 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:20:17.572 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:20:17.758 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$3d99f8ee] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:20:18.105 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:20:18.111 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:20:18.111 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:20:18.111 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:20:18.112 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:20:18.112 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:20:18.112 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:20:18.114 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:20:18.185 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:20:18.185 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1175 ms
+2020-05-18 18:20:19.097 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@78271168, org.springframework.security.web.context.SecurityContextPersistenceFilter@6fe7e8e5, org.springframework.security.web.header.HeaderWriterFilter@1d66cf06, org.springframework.security.web.authentication.logout.LogoutFilter@708fbfc2, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@37b0ecf9, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1538a2fd, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4850fbaf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1d884c57, org.springframework.security.web.session.SessionManagementFilter@51f20599, org.springframework.security.web.access.ExceptionTranslationFilter@138d2c44, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@73769ee5]
+2020-05-18 18:20:19.135 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:20:19.277 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:20:19.332 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:20:19.354 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:20:19.463 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" hostname="DESKTOP-89F2UQS" qosEnable="false" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:20:19.473 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:19.473 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:19.473 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:19.473 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:19.473 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:20:19.704 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:20:19.715 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:20:19.729 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:20:19.784 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:20:20.043 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:20:20.046 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.325 seconds (JVM running for 4.116)
+2020-05-18 18:20:22.631 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=FD418C84173997ED2B7FC796A99A6853] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:20:22.636 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:20:22.636 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:20:22.653 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 17 ms
+2020-05-18 18:20:22.743 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:20:22.803 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:20:23.098 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [274] milliseconds.
+2020-05-18 18:20:23.100 [http-nio-8081-exec-1] ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.NullPointerException: null
+	at com.project.service.impl.LoginServiceImpl.loadUserByUsername(LoginServiceImpl.java:45)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 51 common frames omitted
+2020-05-18 18:20:23.126 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:20:23.128 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:20:23.295 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@526d060a], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@49e76541]
+2020-05-18 18:20:23.431 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:20:23.442 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:20:23.442 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:20:58.661 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:20:58.663 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:20:58.666 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:20:58.726 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 1248 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:20:58.726 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:20:58.756 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:20:58.757 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:20:58.764 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:20:59.315 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:20:59.315 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:20:59.504 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$155e619d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:20:59.858 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:20:59.863 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:20:59.863 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:20:59.864 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:20:59.865 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:20:59.865 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:20:59.865 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:20:59.867 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:20:59.935 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:20:59.935 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1178 ms
+2020-05-18 18:21:00.837 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@815256e, org.springframework.security.web.context.SecurityContextPersistenceFilter@1538a2fd, org.springframework.security.web.header.HeaderWriterFilter@51f20599, org.springframework.security.web.authentication.logout.LogoutFilter@37b0ecf9, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5b76ee25, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7c8a2720, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6866230e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48f9c955, org.springframework.security.web.session.SessionManagementFilter@2ef8ee6e, org.springframework.security.web.access.ExceptionTranslationFilter@58584aa4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5fbea40e]
+2020-05-18 18:21:00.877 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:21:01.018 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:21:01.072 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:21:01.092 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:21:01.198 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnable="false" hostname="DESKTOP-89F2UQS" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:21:01.208 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:01.208 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:01.208 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:01.208 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:01.208 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:01.442 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:21:01.450 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:21:01.463 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:21:01.516 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:21:01.768 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:21:01.772 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.278 seconds (JVM running for 4.141)
+2020-05-18 18:21:04.220 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=4116D7DC7F7FB6658E86CD1D464EFDFA] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:21:04.224 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:21:04.224 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:21:04.242 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-18 18:21:04.331 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:21:04.394 [http-nio-8081-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:21:04.689 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [273] milliseconds.
+2020-05-18 18:21:04.691 [http-nio-8081-exec-1] ERROR o.s.s.w.a.UsernamePasswordAuthenticationFilter - An internal error occurred while trying to authenticate the user.
+org.springframework.security.authentication.InternalAuthenticationServiceException: null
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:123)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:144)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:195)
+	at org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter.attemptAuthentication(UsernamePasswordAuthenticationFilter.java:95)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:212)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:92)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:77)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:830)
+Caused by: java.lang.NullPointerException: null
+	at com.project.service.impl.LoginServiceImpl.loadUserByUsername(LoginServiceImpl.java:45)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.retrieveUser(DaoAuthenticationProvider.java:108)
+	... 51 common frames omitted
+2020-05-18 18:21:04.711 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:04.713 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:21:04.892 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@19370abd], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@7ad7ded4]
+2020-05-18 18:21:05.030 [http-nio-8081-exec-2] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:21:05.041 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:05.042 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:07.225 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:07.225 [http-nio-8081-exec-4] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:07.242 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@1d36d032], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@1909474c]
+2020-05-18 18:21:07.249 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:21:07.279 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:07.280 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:27.139 [restartedMain] INFO  org.apache.dubbo.common.logger.LoggerFactory - using logger: org.apache.dubbo.common.logger.slf4j.Slf4jLoggerAdapter
+2020-05-18 18:21:27.142 [restartedMain] INFO  o.a.d.s.b.c.event.WelcomeLogoApplicationListener - 
+
+ :: Dubbo Spring Boot (v2.7.5) : https://github.com/apache/dubbo-spring-boot-project
+ :: Dubbo (v2.7.5) : https://github.com/apache/dubbo
+ :: Discuss group : dev@dubbo.apache.org
+
+2020-05-18 18:21:27.144 [restartedMain] INFO  o.a.d.s.b.c.e.OverrideDubboConfigApplicationListener - Dubbo Config was overridden by externalized configuration {dubbo.application.qos-enable=false, dubbo.config.multiple=true}
+2020-05-18 18:21:27.199 [restartedMain] INFO  com.project.我的第一个项目Application - Starting 我的第一个项目Application on DESKTOP-89F2UQS with PID 3892 (E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目\target\classes started by naozhong in E:\BaiduNetdiskDownload\sxtoa系统\源码\174.报销管理-审核报销单-代码完善和业务流程图绘制\我的第一个项目)
+2020-05-18 18:21:27.200 [restartedMain] INFO  com.project.我的第一个项目Application - No active profile set, falling back to default profiles: default
+2020-05-18 18:21:27.237 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-18 18:21:27.237 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-18 18:21:27.243 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [org.apache.dubbo.spring.boot.beans.factory.config.DubboConfigBeanCustomizer]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [namePropertyDefaultValueDubboConfigBeanCustomizer] has been registered.
+2020-05-18 18:21:27.782 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingRegistrar - The configuration bean definition [name : org.apache.dubbo.config.ApplicationConfig#0, content : Root bean: class [org.apache.dubbo.config.ApplicationConfig]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null] has been registered.
+2020-05-18 18:21:27.782 [restartedMain] INFO  com.alibaba.spring.util.BeanRegistrar - The Infrastructure bean definition [Root bean: class [com.alibaba.spring.beans.factory.annotation.ConfigurationBeanBindingPostProcessor]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=nullwith name [configurationBeanBindingPostProcessor] has been registered.
+2020-05-18 18:21:27.963 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration' of type [org.apache.dubbo.spring.boot.autoconfigure.DubboAutoConfiguration$$EnhancerBySpringCGLIB$$886895c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-18 18:21:28.293 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2020-05-18 18:21:28.298 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:21:28.298 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-05-18 18:21:28.298 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-18 18:21:28.299 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-18 18:21:28.300 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-18 18:21:28.300 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-18 18:21:28.302 [restartedMain] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-18 18:21:28.367 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2020-05-18 18:21:28.367 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1130 ms
+2020-05-18 18:21:29.251 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3741f47b, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e855307, org.springframework.security.web.header.HeaderWriterFilter@66796a94, org.springframework.security.web.authentication.logout.LogoutFilter@6fb9f353, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@11551179, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@635050bb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@75fee43d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@25ecc3bb, org.springframework.security.web.session.SessionManagementFilter@5bb4decc, org.springframework.security.web.access.ExceptionTranslationFilter@3af7514c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3d0d3633]
+2020-05-18 18:21:29.289 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-05-18 18:21:29.426 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-18 18:21:29.478 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-05-18 18:21:29.503 [restartedMain] INFO  o.s.b.a.web.servlet.WelcomePageHandlerMapping - Adding welcome page template: index
+2020-05-18 18:21:29.603 [restartedMain] INFO  c.a.s.b.f.a.ConfigurationBeanBindingPostProcessor - The configuration bean [<dubbo:application valid="false" qosEnable="false" hostname="DESKTOP-89F2UQS" qosEnableCompatible="false" prefix="dubbo.application" />] have been binding by the configuration properties [{qos-enable=false}]
+2020-05-18 18:21:29.613 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:ssl, try to find an extension (bean) of type org.apache.dubbo.config.SslConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:29.613 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:monitor, try to find an extension (bean) of type org.apache.dubbo.config.MonitorConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:29.613 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:module, try to find an extension (bean) of type org.apache.dubbo.config.ModuleConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:29.613 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:metrics, try to find an extension (bean) of type org.apache.dubbo.config.MetricsConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:29.613 [restartedMain] WARN  o.a.d.c.spring.extension.SpringExtensionFactory -  [DUBBO] No spring extension (bean) named:application, try to find an extension (bean) of type org.apache.dubbo.config.ApplicationConfig, dubbo version: 2.7.5, current host: 192.168.30.1
+2020-05-18 18:21:29.841 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-05-18 18:21:29.848 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-05-18 18:21:29.861 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-05-18 18:21:29.913 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2020-05-18 18:21:30.167 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2020-05-18 18:21:30.170 [restartedMain] INFO  com.project.我的第一个项目Application - Started 我的第一个项目Application in 3.187 seconds (JVM running for 4.031)
+2020-05-18 18:21:32.598 [http-nio-8081-exec-1] INFO  org.apache.tomcat.util.http.parser.Cookie - A cookie header was received [1589023746; JSESSIONID=4B487BF2E295613E0D05A90A35050602] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-05-18 18:21:32.603 [http-nio-8081-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-18 18:21:32.603 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-05-18 18:21:32.621 [http-nio-8081-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 18 ms
+2020-05-18 18:21:32.909 [http-nio-8081-exec-1] WARN  org.apache.catalina.util.SessionIdGeneratorBase - Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [274] milliseconds.
+2020-05-18 18:21:32.930 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:32.933 [http-nio-8081-exec-1] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:33.102 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@4518d8c4], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@300223d9]
+2020-05-18 18:21:33.234 [http-nio-8081-exec-5] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:21:33.245 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:33.245 [http-nio-8081-exec-9] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:36.115 [http-nio-8081-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-05-18 18:21:36.178 [http-nio-8081-exec-10] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-05-18 18:21:36.276 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2.html,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2.html, User{uid=null, username='zhangsan', password='123456', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:36.276 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - Result:login2.html
+2020-05-18 18:21:36.294 [http-nio-8081-exec-8] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@3825ffc9], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@3c1a7c15]
+2020-05-18 18:21:36.301 [http-nio-8081-exec-8] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:21:36.333 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:36.334 [http-nio-8081-exec-6] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:43.217 [http-nio-8081-exec-3] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:43.217 [http-nio-8081-exec-3] INFO  com.project.aspect.LogAspect - Result:login2
+2020-05-18 18:21:43.239 [http-nio-8081-exec-7] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/RandomServlet/random.jpg,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.CodeController.createCode,args:[SecurityContextHolderAwareRequestWrapper[ org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@793bdbc0], org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@75901068]
+2020-05-18 18:21:43.244 [http-nio-8081-exec-7] INFO  com.project.aspect.LogAspect - Result:null
+2020-05-18 18:21:43.275 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - url:http://localhost:8081/login2,ip:0:0:0:0:0:0:0:1,classMethod:com.project.controller.PageController.showPage,args:[login2, User{uid=null, username='null', password='null', realname='null', phone='null', did=0, right1=0, pid=0, position=null, hiredate='null', department=null, onduty='null', leavedate='null', identity='null', sex='null', duties=null, file=null}]
+2020-05-18 18:21:43.275 [http-nio-8081-exec-10] INFO  com.project.aspect.LogAspect - Result:login2

@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.mapper.DutyMapper">
+  <resultMap id="BaseResultMap" type="com.project.pojo.Duty">
+    <id column="did" jdbcType="INTEGER" property="did" />
+    <result column="date" jdbcType="DATE" property="date" />
+    <result column="intime" jdbcType="TIME" property="intime" />
+    <result column="outtime" jdbcType="TIME" property="outtime" />
+    <result column="uid" jdbcType="INTEGER" property="uid" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    did, date, intime, outtime, uid
+  </sql>
+  <select id="selectByExample"  resultType="duty" >
+    select  *
+    from duty d
+    JOIN user u
+    on d.uid=u.uid
+    <where>
+      <if test="param3!=null and param3!=''">
+        and u.username=#{param3}
+      </if>
+      <if test="param5!=null and param5!=''">
+        and date=#{param5}
+      </if>
+      <if test="param4!=0 ">
+        and u.did=#{param4}
+      </if>
+    </where>
+    limit #{param1},#{param2}
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from duty
+    where did = #{did,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from duty
+    where did = #{did,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.project.pojo.DutyExample">
+    delete from duty
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.project.pojo.Duty">
+    insert into duty (did, date, intime, 
+      outtime, uid)
+    values (#{did,jdbcType=INTEGER}, #{date,jdbcType=DATE}, #{intime,jdbcType=TIME}, 
+      #{outtime,jdbcType=TIME}, #{uid,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.project.pojo.Duty">
+    insert into duty
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="did != null">
+        did,
+      </if>
+      <if test="date != null">
+        date,
+      </if>
+      <if test="intime != null">
+        intime,
+      </if>
+      <if test="outtime != null">
+        outtime,
+      </if>
+      <if test="uid != null">
+        uid,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="did != null">
+        #{did,jdbcType=INTEGER},
+      </if>
+      <if test="date != null">
+        #{date,jdbcType=DATE},
+      </if>
+      <if test="intime != null">
+        #{intime,jdbcType=TIME},
+      </if>
+      <if test="outtime != null">
+        #{outtime,jdbcType=TIME},
+      </if>
+      <if test="uid != null">
+        #{uid,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.project.pojo.DutyExample" resultType="java.lang.Long">
+    select count(*) from duty
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update duty
+    <set>
+      <if test="record.did != null">
+        did = #{record.did,jdbcType=INTEGER},
+      </if>
+      <if test="record.date != null">
+        date = #{record.date,jdbcType=DATE},
+      </if>
+      <if test="record.intime != null">
+        intime = #{record.intime,jdbcType=TIME},
+      </if>
+      <if test="record.outtime != null">
+        outtime = #{record.outtime,jdbcType=TIME},
+      </if>
+      <if test="record.uid != null">
+        uid = #{record.uid,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update duty
+    set did = #{record.did,jdbcType=INTEGER},
+      date = #{record.date,jdbcType=DATE},
+      intime = #{record.intime,jdbcType=TIME},
+      outtime = #{record.outtime,jdbcType=TIME},
+      uid = #{record.uid,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.project.pojo.Duty">
+    update duty
+    <set>
+      <if test="date != null">
+        date = #{date,jdbcType=DATE},
+      </if>
+      <if test="intime != null">
+        intime = #{intime,jdbcType=TIME},
+      </if>
+      <if test="outtime != null">
+        outtime = #{outtime,jdbcType=TIME},
+      </if>
+      <if test="uid != null">
+        uid = #{uid,jdbcType=INTEGER},
+      </if>
+    </set>
+    where did = #{did,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.project.pojo.Duty">
+    update duty
+    set date = #{date,jdbcType=DATE},
+      intime = #{intime,jdbcType=TIME},
+      outtime = #{outtime,jdbcType=TIME},
+      uid = #{uid,jdbcType=INTEGER}
+    where did = #{did,jdbcType=INTEGER}
+  </update>
+  <select id="findByDateAndIntime" resultType="Duty">
+    select * from duty where date=#{param1} and uid=#{param2};
+  </select>
+  <insert id="insertIntime" parameterType="User">
+    insert into duty values (default ,#{date},#{intime},null ,#{uid});
+  </insert>
+  <update id="updateOuttime" parameterType="User">
+    update duty set outtime=#{outtime} where uid=#{uid} and date=#{date};
+  </update>
+
+  <resultMap id="smap" type="duty">
+    <id property="date" column="date"></id>
+    <result property="intime" column="intime"></result>
+    <result property="outtime" column="outtime"></result>
+    <association property="user" javaType="user">
+      <id property="username" column="username"></id>
+      <result property="realname" column="realname"></result>
+      <association property="department" javaType="department">
+        <id property="deptname" column="deptname"></id>
+      </association>
+    </association>
+  </resultMap>
+  <select id="findAllInfo" resultMap="smap">
+    select *
+    from `user` u
+    join duty d
+    on u.uid=d.uid
+    JOIN department dt
+    on u.did=dt.deptid
+  </select>
+  <select id="selectCount" resultType="_int">
+    select  count(*)
+    from duty d
+    JOIN user u
+    on d.uid=u.uid
+    <where>
+      <if test="param1!=null and param1!=''">
+        and u.username=#{param1}
+      </if>
+      <if test="param3!=null and param3!=''">
+        and date=#{param3}
+      </if>
+      <if test="param2!=0 ">
+        and u.did=#{param2}
+      </if>
+    </where>
+
+  </select>
+  <select id="selectByUid" resultType="duty" >
+    select * from duty
+    where uid=#{param1}
+    limit #{param2},#{param3}
+  </select>
+  <select id="selectCountByUid" resultType="_int">
+    select count(*) from duty where uid=#{0};
+  </select>
+</mapper>

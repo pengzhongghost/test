@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#btn1").click(function () {
+                $.post("/DutyController/signin",{},function (data) {
+                    if (data==3){
+                        $("#span").html("已经签到");
+                        $("#span").css("color","green");
+                    }else if (data==0){
+                        $("#span").html("签到失败");
+                        $("#span").css("color","red");
+                    }else if (data==10){
+                        $("#span").html("尚未登录");
+                        $("#span").css("color","red");
+                    }else{
+                        $("#span").html("签到成功");
+                        $("#span").css("color","green");
+                    }
+                })
+            })
+            $("#btn2").click(function () {
+                $.post("/DutyController/signout",{},function(data) {
+                    if (data==3){
+                        $("#span").html("尚未签到");
+                        $("#span").css("color","red");
+                    }else if (data==0){
+                        $("#span").html("签退失败");
+                        $("#span").css("color","red");
+                    }else if (data==5){
+                        $("#span").html("签到未满10分钟");
+                        $("#span").css("color","red");
+                    }else if (data==10){
+                        $("#span").html("尚未登录");
+                        $("#span").css("color","red");
+                    }else {
+                        $("#span").html("签退成功");
+                        $("#span").css("color","green");
+                    }
+                })
+            })
+        })
+
+    </script>
+</head>
+
+<body >
+
+    <div class="formbody ">
+
+  
+    
+    <ul class="forminfo stackable" style="position: relative;top: 150px">
+    	<li><label>&nbsp;</label><input class="ui orange button" id="btn1" name="" type="button" value="签到"/> 每天签到一次，不可重复签到</li>
+        <li><label>&nbsp;</label></li>
+    	<li><label>&nbsp;</label></li>
+      	<li><label>&nbsp;</label><input class="ui violet button" id="btn2" name="" type="button" value="签退"/>可重复签退，以最后一次签退为准</li>
+    </ul>
+    <span id="span"></span>
+    </div>
+    <div>
+        <img src="/images/dakai.jpeg" alt="" style="position: relative;left: 420px;top: -150px"/>
+    </div>
+</body>
+
+</html>

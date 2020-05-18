@@ -1,0 +1,83 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script type="text/javascript">
+        var flag1=false;
+        var flag2=false;
+        var flag3=false;
+        $(function () {
+            $("#posid").blur(function () {
+                var posid = $("#posid").val();
+
+                $.post("/PositionController/check",{posid:posid},function (data) {
+                    if (data==3){
+                        $("#span1").html("该编号已被使用");
+                        $("#span1").css("color","red");
+                    }else {
+                        $("#span1").html("编号可以使用");
+                        $("#span1").css("color","green");
+                        flag1=true;
+                    }
+                })
+            })
+            $("#posiname").blur(function () {
+                var posiname = $("#posiname").val();
+                $.post("/PositionController/check",{posiname:posiname},function (data) {
+                    if (data==3){
+                        $("#span2").html("该岗位名已被使用");
+                        $("#span2").css("color","red");
+                    }else {
+                        $("#span2").html("岗位名可以使用");
+                        $("#span2").css("color","green");
+                        flag2=true;
+                    }
+                })
+            })
+            $("#posidesc").blur(function () {
+                var posidesc = $("#posidesc").val();
+                if (posidesc==null||posidesc==""){
+                    $("#span3").html("请输入岗位描述");
+                    $("#span3").css("color","red");
+                }else {
+                    $("#span3").html("岗位描述合法");
+                    $("#span3").css("color","green");
+                    flag3=true;
+                }
+            })
+        })
+        function zong() {
+            return flag1&&flag2&&flag3;
+        }
+    </script>
+</head>
+
+<body >
+
+    <div class="formbody">
+    <form action="/PositionController/positionAdd" method="post" onsubmit="return zong()">
+        <ul class="forminfo" style="margin: 50px auto;margin-left: 50px">
+        <li>
+            <label>岗位编号</label>
+            <input id="posid" name="posid" type="text" class="dfinput" />
+            <span  id="span1"></span>
+        </li>
+        <li><label>岗位名称</label><input id="posiname" name="posiname" type="text" class="dfinput" />
+            <span  id="span2"></span>
+        </li>
+        <li><label>岗位描述</label><input id="posidesc" name="posidesc" type="text" class="dfinput" />
+            <span  id="span3"></span>
+        </li>
+        <li style="position: relative;left: 20px;top: 20px"><label>&nbsp;</label><i class="warehouse icon" style="position: relative;left: -18px"></i><input name="" type="submit" class="ui positive active button" value="上传岗位"/></li>
+        </ul>
+    </form>
+    
+    </div>
+
+
+</body>
+
+</html>

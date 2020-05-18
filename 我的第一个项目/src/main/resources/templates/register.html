@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+</head>
+
+
+<body style="background-color: #1B1C1D;">
+
+<div class="ui inverted segment">
+    <div class="ui inverted  form" style="width: 70%;margin: 50px auto;" >
+        <form th:action="@{/UserController/register}" method="post" enctype="multipart/form-data">
+            <div class="field">
+                <label>用户名</label>
+                <input name="username" placeholder="用户名" type="text">
+            </div>
+            <div class="two fields">
+                <div class="field">
+                    <label>密码</label>
+                    <input name="password" placeholder="密码为6位到12位" type="text">
+                </div>
+                <div class="field">
+                    <label>确认密码</label>
+                    <input placeholder="password" type="text">
+                </div>
+            </div>
+            <div class="field">
+                <label>真实姓名</label>
+                <input name="realname" placeholder="真实姓名" type="text">
+            </div>
+            <div class="field">
+                <label>性别</label>
+                <input name="sex" placeholder="性别" type="text">
+            </div>
+            <div class="field">
+                <label>头像</label>
+                <input  name="img" type="file">
+            </div>
+            <div class="field">
+                <label>手机号</label>
+                <input name="phone" placeholder="手机号码" type="text">
+            </div>
+            <!-- </div>-->
+            <div class="inline field">
+                <div class="ui checkbox">
+                    <input type="checkbox" tabindex="0" >
+                    <label>我同意上述条款以及条件。</label>
+                </div>
+            </div>
+            <input type="submit" class="ui submit button"></input>
+        </form>
+    </div>
+</div>
+
+
+
+</body>

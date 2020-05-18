@@ -1,0 +1,94 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="/js/jquery.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    <!--- Site CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <link rel="stylesheet" type="text/css" href="/css/grid.css">
+
+    <!--- Component CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/icon.css">
+    <link rel="stylesheet" type="text/css" href="/css/button.css">
+    <link rel="stylesheet" type="text/css" href="/css/card.css">
+    <link rel="stylesheet" type="text/css" href="/css/label.css">
+    <link rel="stylesheet" type="text/css" href="/css/image.css">
+    <link rel="stylesheet" type="text/css" href="/css/reveal.css">
+    <link rel="stylesheet" type="text/css" href="/css/dimmer.css">
+    <link rel="stylesheet" type="text/css" href="/css/rating.css">
+    <link rel="stylesheet" type="text/css" href="/css/transition.css">
+    <link rel="stylesheet" type="text/css" href="/css/popup.css">
+
+    <!--- Component JS -->
+    <script src="/assets/library/jquery.min.js"></script>
+    <script src="/assets/library/iframe-content.js"></script>
+    <script type="text/javascript" src="/js/popup.js"></script>
+    <script type="text/javascript" src="/js/dimmer.js"></script>
+    <script type="text/javascript" src="/js/rating.js"></script>
+    <script type="text/javascript" src="/js/transition.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+    <script type="text/javascript">
+        function query() {
+            return  window.confirm("您确定要删除吗？");
+        }
+    </script>
+
+</head>
+
+
+<body >
+
+
+<!--第一行-->
+
+    <div class="ui four stackable cards" style="position: relative; top: 30px !important;left: 30px;margin-right: 50px !important;">
+        <div class="ui card" th:each="position:${positions}">
+            <div class="content">
+                <i class="right floated like icon"></i>
+                <i class="right floated star icon"></i>
+                <div class="header" th:text="${position.posid}+${position.posiname}"></div>
+                <div class="description">
+                    <p th:text="${position.posidesc}"></p>
+                </div>
+            </div>
+
+            <div class="extra content">
+                <span class="left floated like" ><i class="edit icon"></i><a th:href="@{/positionUpdate.html(posid=${position.posid},posiname=${position.posiname},posidesc=${position.posidesc})}" class="tablelink">修改</a></span>
+                <span class="right floated star" ><i class="truck icon"></i><a th:href="@{/PositionController/positionDelete(posid=${position.posid})}" class="tablelink "  onclick="return query()"> 删除</a></span>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $(".click").click(function(){
+  $(".tip").fadeIn(200);
+  });
+  
+  $(".tiptop a").click(function(){
+  $(".tip").fadeOut(200);
+});
+
+  $(".sure").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+  $(".cancel").click(function(){
+  $(".tip").fadeOut(100);
+});
+
+});
+</script>
+<script type="text/javascript">
+    function query() {
+        return  window.confirm("您确定要删除吗？");
+    }
+</script>
+
+</head>
+
+
+<body >
+
+    <div class="rightinfo">
+
+    <table class="tablelist" >
+    	<thead>
+    	<tr>
+        <th>编号<i class="sort"></i></th>
+        <th>部门名称</th>
+        <th>办公地点</th>
+        <th>操作</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        <tr th:each="department:${departments}">
+        <td th:text="${department.deptid}"></td>
+        <td th:text="${department.deptname}"></td>
+        <td th:text="${department.location}"></td>
+        <td><a th:href="@{/deptUpdate.html(deptid=${department.deptid},deptname=${department.deptname},location=${department.location})}" class="tablelink">修改</a> &nbsp;&nbsp;&nbsp;&nbsp;  <a th:href="@{/DeptController/deptDelete(deptid=${department.deptid})}" class="tablelink" onclick="return query()"> 删除</a></td>
+        </tr>
+
+    </table>
+
+    
+    </div>
+    
+    <script type="text/javascript">
+	$('.tablelist tbody tr:odd').addClass('odd');
+	</script>
+
+</body>
+
+</html>

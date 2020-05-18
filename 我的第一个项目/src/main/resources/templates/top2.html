@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+    
+    <script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+		// $(function () {
+		// 	$("#search").click(function () {
+		// 		var searchinfo = $("#search").prev().val();
+		//
+		// 		$.post("/BlogController/showBlog",{searchinfo:searchinfo},function (data) {
+		// 			/**
+		// 			 * frame的另外一个窗口刷新
+		// 			 * */
+		// 			//window.parent.rightFrame.location.load("/BlogController/showBlog?searchinfo="+searchinfo);
+		// 		})
+		//
+		// 	})
+		// })
+
+		function search(data) {
+			var searchinfo = $(data).prev().val();
+
+			var index = window.parent.rightFrame.document.getElementById("rightindex").value;
+
+			window.parent.rightFrame.location.href = "/BlogController/showBlog?searchinfo=" + searchinfo + "&index=" + index;
+		}
+
+    </script>
+</head>
+<body>
+	<!--导航-->
+	<nav class="ui inverted stackable segment">
+		<div class="ui container">
+			<div class="ui inverted secondary menu">
+			<h2 class="ui teal header">Blog</h2>
+			<a href="/BlogController/showBlog" target="rightFrame" class="item"><i class="home icon"></i>首页</a>
+			<a href="/BlogController/BeforeAddBlog" target="rightFrame" class="item"><i class="hand point right icon"></i>发布</a>
+<!--			<a href="#" class="item"><i class="tag icon"></i>标签</a>-->
+			<a href="tech.html" target="rightFrame" class="item"><i class="info icon"></i>帮助</a>
+
+
+					<img id="img" th:if="${session.user!=null}" class="ui avatar image" style="left: 80px" th:src="@{/UserController/show}">
+					<span th:if="${session.user!=null}" style="color: teal" th:text="${session.user.realname}">Username</span>
+				<a href="javascript:0" class="item" style="position: relative;left: 50px"><i class="user icon"></i>当前网络浏览次数为<span th:text="${#servletContext.getAttribute('count')}"></span>次</a>
+				<span th:if="${session.user==null}" hidden="hidden" style="color: teal" th:text="Username">Username</span>
+			<div class="right item">
+				<div class="ui icon input">
+					<input id="searchinfo" type="text" placeholder="search" />
+					<i class="search link icon button" id="search" onclick="search(this)"></i>
+				</div>
+
+
+				<div class="ui icon input" style="position: relative;right: -60px !important;">
+				<a th:if="${session.user!=null}" target="_parent" href="/UserController/loginOut"><i class="negative ui button"><i class="logout ui icon"></i>登出</i></a>
+				<a th:if="${session.user==null}" target="_parent" href="/login2.html"><i class="positive ui button"><i class="play ui icon"></i>登录</i></a>
+				</div>
+<!--				<div   style="position: relative;right: -30px !important;">-->
+<!--					<img class="ui avatar image" src="/UserController/show">-->
+<!--					<span style="color: teal" th:text="${session.user.realname}">Username</span>-->
+<!--				</div>-->
+
+			</div>
+<!--				<div id="pic" class="ui popup flowing transion hidden">-->
+<!--					<div class="ui orange basic label">-->
+<!--						<div class="ui images" style="font-size: inherit;!important">-->
+<!--							<div class="image">-->
+<!--								<img th:src="@{/UserController/show}" class="ui fluid rounded image" style="width:30px ;"/>-->
+<!--								<div class="center aligned" th:text="${session.user.realname}"></div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+		</div>
+		</div>
+	</nav>
+
+	<script>
+
+		$('#img').popup({
+			popup : $('#pic'),
+			position: 'right center'
+		});
+	</script>
+
+	
+</body>
+</html>

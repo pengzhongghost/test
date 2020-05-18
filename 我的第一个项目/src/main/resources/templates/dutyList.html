@@ -1,0 +1,184 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(e) {
+		    $(".select1").uedSelect({
+				width : 200		  
+			});
+			
+		});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+			  $(".click").click(function(){
+			  $(".tip").fadeIn(200);
+			  });
+			  
+			  $(".tiptop a").click(function(){
+			  $(".tip").fadeOut(200);
+			});
+			
+			  $(".sure").click(function(){
+			  $(".tip").fadeOut(100);
+			});
+			
+			  $(".cancel").click(function(){
+			  $(".tip").fadeOut(100);
+			});
+			
+			});
+		</script>
+		<script type="text/javascript">
+
+
+			$(function () {
+				 var chboxs = $("input[name=chbox]");
+				var dutyids=[];
+
+				$("#total").click(function () {
+					$("input[name=chbox]").prop("checked",$("#total").prop("checked"));
+				})
+
+
+				$("#btn2").click(function () {
+					var username = $("#username").val();
+					var did = $("#did").val();
+					var date = $("#date").val();
+					// var chboxs = document.getElementsByName("chbox");
+
+					for (var i in chboxs){
+						if (chboxs[i].checked){
+							dutyids.push(chboxs[i].previousElementSibling.value);
+						}
+					}
+					if (dutyids.length==0){
+
+					}else {
+						location.href="/DutyController/ExcelHandler?username="+username+"&did="+did+"&date="+date+"&dutyids="+dutyids;
+					}
+
+				})
+			})
+		</script>
+	</head>
+
+	<body >
+
+		<div class="rightinfo">
+			<form th:action="@{/DutyController/findAllDuty}" method="post">
+				<ul class="prosearch">
+					<li>
+
+						<label>查询：</label><i>用户名</i>
+						<a>
+							<input th:value="${username}" id="username" name="username" type="text" class="scinput" />
+						</a><i>所属部门</i>
+						<a style="position: relative;top:-3px">
+							<select class="ui dropdown" name="did" id="did">
+									<option th:value="0">--全部--</option>
+									<option th:selected="${did==department.deptid}" th:each="department:${departments}" th:value="${department.deptid}" th:text="${department.deptname}" ></option>
+
+							</select>
+						</a>
+						<i>考勤时间</i>
+						<a>
+							<input th:value="${date}" name="date" type="text" class="scinput" id="date"/>
+						</a>
+						<a>
+							<input name="" type="submit" class="sure" value="查询" />
+
+						</a>
+
+
+						<a>
+							 <input  id="btn2" type="button" class="scbtn2" value="导出"/>
+
+						</a>
+
+					</li>
+				</ul>
+			</form>
+			<div class="formtitle1"><span>考勤管理</span></div>
+
+			<table class="tablelist">
+				<thead>
+					<tr>
+						<th>
+							<input id="total" name="total" type="checkbox" value=""  />
+						</th>
+						<th>用户名<i class="sort"></i></th>
+						<th>真实姓名</th>
+						<th>所属部门</th>
+						<th>出勤日期</th>
+						<th>签到时间</th>
+						<th>签退时间</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="duty:${duties}">
+						<td>
+							<input th:value="${duty.did}" name="dutyid" type="hidden">
+							<input name="chbox" type="checkbox" value="" />
+						</td>
+						<td  th:text="${duty.user.username}"></td>
+						<td  th:text="${duty.user.realname}"></td>
+						<td  th:text="${duty.user.department.deptname}"></td>
+						<td  th:text="${duty.date}"></td>
+						<td  th:text="${duty.intime}"></td>
+						<td  th:text="${duty.outtime}"></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<div class="pagin">
+				<div class="message">共<i class="blue" th:text="${pageBean.totalCount}"></i>条记录，当前显示第&nbsp;<i class="blue" th:text="${pageBean.index}">&nbsp;</i>页</div>
+				<ul class="paginList">
+					<li class="paginItem">
+						<a th:if="${pageBean.index<=1}" href="javascript:0">
+							<span class="pagepre"></span>
+						</a>
+						<a th:if="${pageBean.index>1}" th:href="@{/DutyController/findAllDuty(index=${pageBean.index-1},username=${username},did=${did},date=${date})}">
+							<span class="pagepre"></span>
+						</a>
+					</li>
+
+
+
+					<li class="paginItem " th:each="number:${pageBean.numbers}">
+						<a th:if="${number==pageBean.index}"
+						   href="javascript:0"  th:text="'['+${number}+']'">
+						</a>
+
+						<a th:if="${number!=pageBean.index}"
+						   th:href="@{/DutyController/findAllDuty(index=${number},username=${username},did=${did},date=${date})}"  th:text="${number}">
+						</a>
+					</li>
+
+					<li class="paginItem">
+						<a th:if="${pageBean.index>=pageBean.totalPageCount}" href="javascript:0">
+							<span class="pagenxt"></span>
+						</a>
+						<a th:if="${pageBean.index<pageBean.totalPageCount}" th:href="@{/DutyController/findAllDuty(index=${pageBean.index+1},username=${username},did=${did},date=${date})}">
+							<span class="pagenxt"></span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+
+	</body>
+
+</html>

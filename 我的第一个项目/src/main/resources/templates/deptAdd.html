@@ -1,0 +1,86 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/js/jquery.js"></script>
+    <script type="text/javascript">
+        var flag1=false;
+        var flag2=false;
+        var flag3=false;
+        $(function () {
+            $("#deptId").blur(function () {
+                var deptid = $("#deptId").val();
+
+                $.post("/DeptController/check",{deptid:deptid},function (data) {
+                    if (data==3){
+                        $("#span1").html("该编号已被使用");
+                        $("#span1").css("color","red");
+                    }else {
+                        $("#span1").html("编号可以使用");
+                        $("#span1").css("color","green");
+                        flag1=true;
+                    }
+                })
+            })
+            $("#deptName").blur(function () {
+                var deptname = $("#deptName").val();
+                $.post("/DeptController/check",{deptname:deptname},function (data) {
+                    if (data==3){
+                        $("#span2").html("该部门名已被使用");
+                        $("#span2").css("color","red");
+                    }else {
+                        $("#span2").html("部门名可以使用");
+                        $("#span2").css("color","green");
+                        flag2=true;
+                    }
+                })
+            })
+            $("#location").blur(function () {
+                var location = $("#location").val();
+                if (location==null||location==""){
+                    $("#span3").html("请输入部门地址");
+                    $("#span3").css("color","red");
+                }else {
+                    $("#span3").html("部门地址合法");
+                    $("#span3").css("color","green");
+                    flag3=true;
+                }
+            })
+        })
+        function zong() {
+            return flag1&&flag2&&flag3;
+        }
+    </script>
+</head>
+
+<body >
+    
+    <div class="formbody" style="margin: 50px auto;margin-left: 50px">
+
+    <form th:action="@{/DeptController/deptAdd}" method="post" onsubmit="return zong()">
+    <ul class="forminfo">
+	<li>
+        <label>部门编号</label>
+        <input id="deptId" name="deptid" type="text" class="dfinput" />
+        <span style="color: red" id="span1"></span>
+    </li>
+    <li>
+        <label>部门名称</label>
+        <input id="deptName" name="deptname" type="text" class="dfinput" />
+        <span  id="span2"></span>
+    </li>
+    <li>
+        <label>办公地点</label>
+        <input id="location" name="location" type="text" class="dfinput" />
+        <span  id="span3"></span>
+    </li>
+    <li><label>&nbsp;</label><input name="" type="submit" class="btn" value="确认保存"/></li>
+    </ul>
+    </form>
+    
+    </div>
+
+</body>
+
+</html>

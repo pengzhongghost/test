@@ -1,0 +1,89 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+		<script type="text/javascript" src="/js/jquery.js"></script>
+
+	</head>
+
+	<body >
+
+
+		<div class="formbody" style="position: relative;top: 150px;left: 150px">
+			<form th:action="@{/UserController/userUpdate}" method="post">
+			<ul class="forminfo">
+				<input name="uid" type="hidden" class="dfinput" th:value="${user.uid}" />
+				<li>
+					<label>用户名</label>
+					<input name="username" type="text" class="dfinput" th:value="${user.username}" readonly="readonly"/><i>必须唯一，也可以根据真实姓名自动生成</i></li>
+				<li>
+					<li>
+						<label>真实姓名</label>
+						<input name="realname" type="text" class="dfinput" th:value="${user.realname}"/><i></i></li>
+					<li>
+						<label>性别</label>
+						<cite >
+							<input th:field="*{user.sex}" name="sex" type="radio" value="男" />男&nbsp;&nbsp;&nbsp;&nbsp;
+							<input th:field="*{user.sex}" name="sex" type="radio" value="女" />女
+						</cite>
+
+					</li>
+					<li>
+						<label>入职时间</label>
+						<input  th:value="${user.hiredate}" name="hiredate" type="text" class="dfinput" /><i></i></li>
+					
+					<li>
+						<label>离职时间</label>
+						<input  name="leavedate" type="text" class="dfinput" /><i></i></li>
+					<li>
+
+						<label>是否在职</label>
+						<cite >
+							<input th:checked="${user.onduty=='是'}" name="onduty" type="radio" value="是" />是&nbsp;&nbsp;&nbsp;&nbsp;
+							<input th:checked="${user.onduty=='否'}" name="onduty" type="radio" value="否" />否
+						</cite>
+
+					</li>
+					<li>
+
+						<label>所属部门<b>*</b></label>
+						<div class="vocation">
+							<select class="ui labeled icon top right pointing dropdown " th:field="*{user.did}" >
+								<option name="did" th:each="department:${departments}" th:value="${department.deptid}" th:text="${department.deptname}"></option>
+							</select>
+						</div>
+						<label>工作<b>*</b></label>
+						<div class="vocation">
+							<select class="ui labeled icon top right pointing dropdown " th:field="*{user.pid}" >
+								<option name="pid" th:each="position:${positions}" th:value="${position.posid}" th:text="${position.posiname}"></option>
+							</select>
+						</div>
+					</li>
+
+					</li>
+					<li>
+						<label>联系方式</label>
+						<input name="phone" th:value="${user.phone}" type="text" class="dfinput" />
+					</li>
+
+					<li>
+						<label>身份证号</label>
+						<input name="identity" th:value="${user.identity}" type="text" class="dfinput" />
+					</li>
+					<li>
+						<label>&nbsp;</label>
+						<input name="" type="submit" class="btn" value="确认保存" />
+					</li>
+			</ul>
+			</form>
+		</div>
+
+	</body>
+
+</html>

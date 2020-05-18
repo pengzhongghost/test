@@ -1,0 +1,106 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+<!--		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>-->
+<!--		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>-->
+		<script type="text/javascript">
+		$(document).ready(function(e) {
+		    $(".select1").uedSelect({
+				width : 345			  
+			});
+			
+		});
+	</script>
+	<script type="text/javascript">
+		KE.show({id:"ecp",width:"800px",height:"300px"});
+	</script>
+	</head>
+
+	<body >
+
+		<div class="formbody" style="position: relative;left: 30px;top: 30px;">
+
+			<form th:action="@{/UserController/staffAdd}" method="post" enctype="multipart/form-data">
+
+				<ul class="forminfo" >
+					<li>
+						<label>用户名</label>
+						<input name="username" type="text" class="dfinput" /></li>
+					<li>
+						<li>
+							<label>真实姓名</label>
+							<input name="realname" type="text" class="dfinput" /><i></i></li>
+						<li>
+							<label>性别</label><cite>
+							<input name="sex" type="radio" value="男" checked="checked" />男&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="sex" type="radio" value="女" />女</cite>
+						</li>
+
+						<li>
+							<label>入职时间</label>
+							<input name="hiredate" type="text" class="dfinput" onfocus="WdatePicker()"/><i></i></li>
+						<li>
+							<label>离职时间</label>
+							<input name="leavedate" type="text" class="dfinput" onfocus="WdatePicker()"/><i></i></li>
+						<li>
+							<label>是否在职</label><cite>
+							<input name="onduty" type="radio" value="是" checked="checked" />是&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="onduty" type="radio" value="否" />否</cite>
+						</li>
+
+						<li>
+							<label>用户类型</label><cite>
+							<input name="right1" type="radio" value="1" checked="checked" />公司员工&nbsp;&nbsp;&nbsp;&nbsp;
+							<input name="right1" type="radio" value="2" />普通用户</cite>
+						</li>
+
+						<li>
+							<label>所属部门<b>*</b></label>
+							<div class="vocation">
+								<select class="ui dropdown" name="did" >
+									<option th:each="department:${departments}" th:value="${department.deptid}" th:text="${department.deptname}"></option>
+								</select>
+							</div>
+
+						</li>
+						<li>
+							<label>从事岗位<b>*</b></label>
+							<div class="vocation">
+								<select class="ui selection dropdown" name="pid" >
+									<option th:each="position:${positions}" th:value="${position.posid}" th:text="${position.posiname}"></option>
+
+								</select>
+							</div>
+
+						</li>
+						<li>
+							<label>头像</label>
+							<input name="img" type="file" class="dfinput" />
+						</li>
+						<li>
+							<label>联系方式</label>
+							<input name="phone" type="text" class="dfinput" />
+						</li>
+						<li>
+							<label>身份证号</label>
+							<input name="identity" type="text" class="dfinput" />
+						</li>
+						<li>
+							<label>&nbsp;</label>
+							<input name="" type="submit" class="btn" value="确认保存" />
+						</li>
+				</ul>
+			</form>
+		</div>
+
+	</body>
+
+</html>

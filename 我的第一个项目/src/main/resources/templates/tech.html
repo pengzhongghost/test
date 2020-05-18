@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+<script language="javascript">
+	$(function(){
+    $('.error').css({'position':'absolute','left':($(window).width()-490)/2});
+	$(window).resize(function(){  
+    $('.error').css({'position':'absolute','left':($(window).width()-490)/2});
+    })  
+});  
+</script> 
+
+
+</head>
+
+
+<body style="background-image: url(/images/watercolor.png);">
+
+
+
+<div class="ui container" style="margin-top: 50px">
+    <div class="ui stackable grid">
+        <div class="eleven wide column">
+            <img src="images/liubei.jpg" alt="" class="ui rounded image" />
+        </div>
+        <div class="five wide column">
+            <div class="top attached segment">
+                <div class="ui header">我的信息</div>
+            </div>
+            <div class="ui attached segment">
+                <p>	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    你好，我是18班的彭钟，
+                    Java初学者，喜欢游戏，运动，旅游
+                    喜爱钻研，不惧困难，坚信在工作之余花时间每天多学会一点点不会的技术，总有一天会成为大神</p>
+            </div>
+            <div class="ui attached segment">
+                <div class="ui teal basic left pointing label">编程</div>
+                <div class="ui teal basic left pointing label">电影</div>
+                <div class="ui teal basic left pointing label">看书</div>
+                <div class="ui teal basic left pointing label">运动</div>
+            </div>
+            <div class="ui right aligned attached segment">
+                <div class="ui purple basic right pointing label">旅游</div>
+                <div class="ui purple basic right pointing label">游戏</div>
+                <div class="ui purple basic right pointing label">妹子</div>
+                <div class="ui purple basic right pointing label">买菜</div>
+            </div>
+            <div class="ui bottom center aligned attached segment">
+                <!--<a href="" class="ui circular icon button" style="width:35px;height: 35px;position: relative;left: 0px;top: 8px;"><img src="images/alipay.svg" style="width: 17px;height: 19px;position: relative;left: -2px;top: -3px;"/></a>-->
+
+                <a href="" id="wechat" class="ui circular icon button"><i class="weixin icon"></i></a>
+                <a href="" id="telegram" class="ui circular icon button" data-content="@kaonijiwa" data-variation="huge"><i class="telegram icon"></i></a>
+
+            </div>
+        </div>
+        <div id="wechat1" class="ui popup flowing transion hidden">
+            <div class="ui teal basic label">
+                <div class="ui images" style="font-size: inherit;!important">
+                    <div class="image">
+                        <img src="/images/wechat.jpg" class="ui fluid rounded image" style="width:120px ;"/>
+                        <div class="center aligned">微信</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    $('#wechat').popup({
+        popup : $('#wechat1'),
+        position: 'top center'
+    });
+    $('#telegram').popup({
+        inline: true
+    });
+
+</script>
+</body>
+    
+
+
+</body>
+
+</html>

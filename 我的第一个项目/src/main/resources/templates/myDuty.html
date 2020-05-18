@@ -1,0 +1,54 @@
+<html  xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>无标题文档</title>
+		<link href="/css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="/js/jquery.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+
+
+	</head>
+
+	<body >
+
+
+			<a class="ui blue image label" style="margin-top: 30px;margin-left: 30px"><img src="/images/lvbu.jpeg">
+				考勤信息 <div class="detail" th:text="${session.user.realname}"></div>
+
+
+		<div class="rightinfo">
+
+			<table class="tablelist" style="width: 1000px">
+				<thead>
+					<tr>
+
+						<th>出勤日期</th>
+						<th>签到时间</th>
+						<th>签退时间</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr th:each="duty:${duties}">
+
+						<td th:text="${duty.date}"></td>
+						<td th:text="${duty.intime}"></td>
+						<td th:text="${duty.outtime}"></td>
+					</tr>
+
+				</tbody>
+			</table>
+
+		</div>
+
+		<script type="text/javascript">
+			$('.tablelist tbody tr:odd').addClass('odd');
+		</script>
+			</a>
+	</body>
+
+</html>

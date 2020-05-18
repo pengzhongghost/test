@@ -1,0 +1,37 @@
+﻿<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">-->
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>博客</title>
+
+</head>
+<frameset class="stackable ui" rows="60,*,150" cols="*" frameborder="no" border="0" framespacing="0" th:if="${session.user!=null&&session.user.right1==1}">
+  <frame  src="/top2.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frameset cols="187,*" frameborder="no" border="0" framespacing="0">
+    <frame src="/left.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />
+    <frame src="/BlogController/showBlog" name="rightFrame" id="rightFrame" title="rightFrame" />
+  </frameset>
+  <frame src="/BlogController/showThreeBlogs" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />
+</frameset>
+<frameset class="stackable ui" rows="60,*,150" cols="*" frameborder="no" border="0" framespacing="0" th:if="${session.user!=null&&session.user.right1==0}">
+  <frame  src="/top2.html" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frameset  frameborder="no" border="0" framespacing="0">
+<!--    <frame src="/left.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />-->
+    <frame src="/BlogController/showBlog" name="rightFrame" id="rightFrame" title="rightFrame" />
+  </frameset>
+  <frame src="/BlogController/showThreeBlogs" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />
+</frameset>
+<frameset class="stackable ui" rows="*" cols="*" frameborder="no" border="0" framespacing="0" th:if="${session.user==null}">
+  <frame  src="/login2.html" target="_parent" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" title="topFrame" />
+  <frameset  frameborder="no" border="0" framespacing="0">
+    <!--    <frame src="/left.html" name="leftFrame" scrolling="No" noresize="noresize" id="leftFrame" title="leftFrame" />-->
+    <frame src="/BlogController/showBlog" name="rightFrame" id="rightFrame" title="rightFrame" />
+  </frameset>
+  <frame src="/BlogController/showThreeBlogs" name="bottomFrame" scrolling="No" noresize="noresize" id="bottomFrame" title="bottomFrame" />
+</frameset>
+<noframes><body>
+</body></noframes>
+</html>
