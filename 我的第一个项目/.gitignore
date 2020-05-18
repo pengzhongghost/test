@@ -26,7 +26,8 @@ target/
 /nbdist/
 /.nb-gradle/
 build/
-/logs
+/catalina.base_IS_UNDEFINED
+/src/test
 /test
 /mvnw.cmd 
 ### VS Code ###
